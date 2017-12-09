@@ -1,200 +1,132 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html">
 <html lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Task 1</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lab 11</title>
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     
-    <style>
-        .tasks {
-            padding: 20px;
-            padding-left: 40px;
-        }
-        .tasks li {
-            position: relative;
-        }
-        
-        .form-control {
-            width: 465px;
-            margin-bottom: 15px;
-        }
-        .button {
-            font: 2em Arial,sans-serif;
-        }
-        
-        .item {
-            background-color: #eee;
-            border-radius: 5px;
-            padding: 4px 10px;
-            margin-top: 10px;
-        }
-        .play{
-            width: 100px;
-            height: 100px;
-            background-color: #369;
-            border-radius: 100px;
-            position: absolute;
-            top: 120px;
-        }
-        
-        .alert {
-            position: absolute;
-            width: 450px;
-            right: 20px;
-        }
-        
-        .box {
-            height: 400px;
-            background-color: #e1e2e3;
-            border-color: #000;
-            position: relative;
-        }
-        .dragable {
-            position: absolute;
-            width: 50px;
-            height: 50px;            
-            cursor: pointer;
-            z-index: 1;
-        }
-        .red {
-            background-color: #f00;
-        }
-        .green {
-            background-color: #0b0;
-        }
-        .blue {
-            background-color: #00f;
-        }
-        .purple {
-            background-color: #874de4;
-        }
-        .move {
-            cursor: move;
-            opacity: 0.5;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
-            z-index: 10;
-        }
-    </style>
-    
-</head>
-<body>
-<ol class="tasks">
-    <li>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <ol class="tasks">
+        <li>
 
-<h4>
-При нажатии на кнопку, добавлять в <code>div</code> с идентификатором <code>container</code> фрагмент разметки в выбраную позицию.
-В заголовок писать порядковый номер вставляемого элемента
-</h4>
-<pre>
- &lt;div class="item"&gt; 
- &lt;h4&gt;Заголовок #&lt;/h4&gt;
- &lt;p&gt;текст текст текст&lt;/p&gt;
- &lt;/div&gt;
-</pre>
-<br />
+    <h4>
+    При нажатии на кнопку, добавлять в <code>div</code> с идентификатором <code>container</code> фрагмент разметки в выбраную позицию.
+    В заголовок писать порядковый номер вставляемого элемента
+    </h4>
+    <pre>
+    &lt;div class="item"&gt; 
+    &lt;h4&gt;Заголовок #&lt;/h4&gt;
+    &lt;p&gt;текст текст текст&lt;/p&gt;
+    &lt;/div&gt;
+    </pre>
+    <br />
 
-<select class="form-control">
-    <option>Добавить в начало</option>
-    <option>Добавить в середину</option>
-    <option>Добавить в конец</option>
-</select>
-<button class="button btn btn-success">Нажать</button>
-<div id="container"></div>
+    <select class="form-control">
+        <option>Добавить в начало</option>
+        <option>Добавить в середину</option>
+        <option>Добавить в конец</option>
+    </select>
+    <button class="button btn btn-success">Нажать</button>
+    <div id="container"></div>
 
-<script>
-// script for task #1
-</script>
+    <script>
+    // script for task #1
+    </script>
 
-    </li>
-    <li style="height: 220px">
+        </li>
+        <li style="height: 220px">
 
-<h4>При нажатии на ссылку, равномерно перемещать HTML-элемент с классом <code>play</code> вправо, при повторном нажатии - перемещать влево.</h4>
-<br />
+    <h4>При нажатии на ссылку, равномерно перемещать HTML-элемент с классом <code>play</code> вправо, при повторном нажатии - перемещать влево.</h4>
+    <br />
 
 
-<a href="/" class="button btn btn-success">Поехали!</a>
-<div class="play"></div>
+    <a href="/" class="button btn btn-success">Поехали!</a>
+    <div class="play"></div>
 
-<script>
-// script for task #2
-</script>
+    <script>
+    // script for task #2
+    </script>
 
-    </li>
-    <li>
-<h4>При нажатии на кнопку выдавать bootstrap-alert соответствующего типа c текстом из поля ввода.
-HTML код всплывающих элементов можно посмотреть по <a href="https://www.w3schools.com/bootstrap/bootstrap_alerts.asp">ссылке</a>.
-Alert должен плавно появляться в верхнем правом углу, при нажатии на крестик - исчезать. Так же alert'ы должны закрываться автоматичесски через 10 секунд.
-Если несколько раз подряд нажать на кнопку - то сообщения выстраиваются один под другим.
-</h4>
-<br />
-
-
-<input type="text" class="form-control">
-
-<button class="button btn btn-success">Success</button>
-<button class="button btn btn-info">Info</button>
-<button class="button btn btn-warning">Warning</button>
-<button class="button btn btn-danger">Danger</button>
+        </li>
+        <li>
+    <h4>При нажатии на кнопку выдавать bootstrap-alert соответствующего типа c текстом из поля ввода.
+    HTML код всплывающих элементов можно посмотреть по <a href="https://www.w3schools.com/bootstrap/bootstrap_alerts.asp">ссылке</a>.
+    Alert должен плавно появляться в верхнем правом углу, при нажатии на крестик - исчезать. Так же alert'ы должны закрываться автоматичесски через 10 секунд.
+    Если несколько раз подряд нажать на кнопку - то сообщения выстраиваются один под другим.
+    </h4>
+    <br />
 
 
-<script>
-// script for task #3
-</script>
-    </li>
-    <li>
-<h4><b class="h2 text-danger">*</b>
-Сделать кнопочку <i class="text-info">scroll to top</i>, она должна появляться когда пользователь проскролил страницу на размер одного видимого экрана.
-Кнопочку нужно аккуратно стилизовать.
-</h4>
-<br />
+    <input type="text" class="form-control">
 
-<script>
-// script for task #4
-</script>
-    </li>
-    <li>
-<h4><b class="h2 text-danger">**</b>
-Реализовать перемещение элементов внутри контейнера. Элементы нельзя ставить ближе <i class="text-info">10px</i> к границе контейнера.
-Во время перемещения элемента ему должен присваиваться класс <code>move</code>. Перетаскивание эелементов должно так де работать и на мобильных устройствах.</h4>
-<br />
+    <button class="button btn btn-success">Success</button>
+    <button class="button btn btn-info">Info</button>
+    <button class="button btn btn-warning">Warning</button>
+    <button class="button btn btn-danger">Danger</button>
 
-<div class="panel box">
-<div class="dragable red" style="left: 250px;top: 28px;"></div>
-<div class="dragable green" style="left: 50px;top: 68px;"></div>
-<div class="dragable blue" style="left: 350px;top: 287px;"></div>
-<div class="dragable purple move" style="left: 70px;top: 28px;"></div>
-</div>
 
-<script>
-// script for task #5
-</script>
-    </li>
-</ol>
-<br><br><br>
+    <script>
+    // script for task #3
+    </script>
+        </li>
+        <li>
+    <h4><b class="h2 text-danger">*</b>
+    Сделать кнопочку <i class="text-info">scroll to top</i>, она должна появляться когда пользователь проскролил страницу на размер одного видимого экрана.
+    Кнопочку нужно аккуратно стилизовать.
+    </h4>
+    <br />
 
-<div class="alert alert-success" style="top: 10px">
-  <a href="#" class="close" title="close">&times;</a>
-  <strong>Success!</strong> Indicates a successful or positive action.
-</div>
+    <script>
+    // script for task #4
+    </script>
+        </li>
+        <li>
+    <h4><b class="h2 text-danger">**</b>
+    Реализовать перемещение элементов внутри контейнера. Элементы нельзя ставить ближе <i class="text-info">10px</i> к границе контейнера.
+    Во время перемещения элемента ему должен присваиваться класс <code>move</code>. Перетаскивание эелементов должно так де работать и на мобильных устройствах.</h4>
+    <br />
 
-<div class="alert alert-info" style="top: 70px">
-  <a href="#" class="close" title="close">&times;</a>
-  <strong>Info!</strong> Indicates a neutral informative change or action. With long long text
-</div>
+    <div class="panel box">
+    <div class="dragable red" style="left: 250px;top: 28px;"></div>
+    <div class="dragable green" style="left: 50px;top: 68px;"></div>
+    <div class="dragable blue" style="left: 350px;top: 287px;"></div>
+    <div class="dragable purple move" style="left: 70px;top: 28px;"></div>
+    </div>
 
-<div class="alert alert-warning" style="top: 150px">
-  <a href="#" class="close" title="close">&times;</a>
-  <strong>Warning!</strong> Indicates a warning that might need attention.
-</div>
+    <script>
+    // script for task #5
+    </script>
+        </li>
+    </ol>
+    <br><br><br>
 
-<div class="alert alert-danger" style="top: 210px">
-  <a href="#" class="close" title="close">&times;</a>
-  <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
-</div>
+    <div class="alert alert-success" style="top: 10px">
+    <a href="#" class="close" title="close">&times;</a>
+    <strong>Success!</strong> Indicates a successful or positive action.
+    </div>
 
-</body>
+    <div class="alert alert-info" style="top: 70px">
+    <a href="#" class="close" title="close">&times;</a>
+    <strong>Info!</strong> Indicates a neutral informative change or action. With long long text
+    </div>
+
+    <div class="alert alert-warning" style="top: 150px">
+    <a href="#" class="close" title="close">&times;</a>
+    <strong>Warning!</strong> Indicates a warning that might need attention.
+    </div>
+
+    <div class="alert alert-danger" style="top: 210px">
+    <a href="#" class="close" title="close">&times;</a>
+    <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+    </div>
+    <script src="main.js"></script>
+  </body>
 </html>
 
 

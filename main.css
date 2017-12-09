@@ -1,0 +1,68 @@
+.tasks {
+    padding: 20px;
+    padding-left: 40px;
+}
+.tasks li {
+    position: relative;
+}
+
+.form-control {
+    width: 465px;
+    margin-bottom: 15px;
+}
+.button {
+    font: 2em Arial,sans-serif;
+}
+
+.item {
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 4px 10px;
+    margin-top: 10px;
+}
+.play{
+    width: 100px;
+    height: 100px;
+    background-color: #369;
+    border-radius: 100px;
+    position: absolute;
+    top: 120px;
+}
+
+.alert {
+    position: absolute;
+    width: 450px;
+    right: 20px;
+}
+
+.box {
+    height: 400px;
+    background-color: #e1e2e3;
+    border-color: #000;
+    position: relative;
+}
+.dragable {
+    position: absolute;
+    width: 50px;
+    height: 50px;            
+    cursor: pointer;
+    z-index: 1;
+}
+.red {
+    background-color: #f00;
+}
+.green {
+    background-color: #0b0;
+}
+.blue {
+    background-color: #00f;
+}
+.purple {
+    background-color: #874de4;
+}
+.move {
+    cursor: move;
+    opacity: 0.5;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 10;
+}
