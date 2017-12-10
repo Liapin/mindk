@@ -13,47 +13,37 @@
   </head>
   <body>
     <ol class="tasks">
-        <li>
+      <li>
+        <h4>
+          При нажатии на кнопку, добавлять в <code>div</code> с идентификатором <code>container</code> фрагмент разметки в выбраную позицию.
+          В заголовок писать порядковый номер вставляемого элемента
+        </h4>
+        <pre>
+          &lt;div class="item"&gt; 
+          &lt;h4&gt;Заголовок #&lt;/h4&gt;
+          &lt;p&gt;текст текст текст&lt;/p&gt;
+          &lt;/div&gt;
+        </pre>
+        <br />
 
-    <h4>
-    При нажатии на кнопку, добавлять в <code>div</code> с идентификатором <code>container</code> фрагмент разметки в выбраную позицию.
-    В заголовок писать порядковый номер вставляемого элемента
-    </h4>
-    <pre>
-    &lt;div class="item"&gt; 
-    &lt;h4&gt;Заголовок #&lt;/h4&gt;
-    &lt;p&gt;текст текст текст&lt;/p&gt;
-    &lt;/div&gt;
-    </pre>
-    <br />
+        <select class="form-control">
+          <option>Добавить в начало</option>
+          <option>Добавить в середину</option>
+          <option>Добавить в конец</option>
+        </select>
+        <button id="insertButton" class="button btn btn-success">Нажать</button>
+        <div id="container"></div>
+    </li>
+    <li style="height: 220px">
+      <h4>При нажатии на ссылку, равномерно перемещать HTML-элемент с классом <code>play</code> вправо, при повторном нажатии - перемещать влево.</h4>
+      <br />
+      <a href="/" class="button btn btn-success">Поехали!</a>
+      <div class="play"></div>
 
-    <select class="form-control">
-        <option>Добавить в начало</option>
-        <option>Добавить в середину</option>
-        <option>Добавить в конец</option>
-    </select>
-    <button class="button btn btn-success">Нажать</button>
-    <div id="container"></div>
-
-    <script>
-    // script for task #1
-    </script>
-
-        </li>
-        <li style="height: 220px">
-
-    <h4>При нажатии на ссылку, равномерно перемещать HTML-элемент с классом <code>play</code> вправо, при повторном нажатии - перемещать влево.</h4>
-    <br />
-
-
-    <a href="/" class="button btn btn-success">Поехали!</a>
-    <div class="play"></div>
-
-    <script>
-    // script for task #2
-    </script>
-
-        </li>
+      <script>
+      // script for task #2
+      </script>
+    </li>
         <li>
     <h4>При нажатии на кнопку выдавать bootstrap-alert соответствующего типа c текстом из поля ввода.
     HTML код всплывающих элементов можно посмотреть по <a href="https://www.w3schools.com/bootstrap/bootstrap_alerts.asp">ссылке</a>.
