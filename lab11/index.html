@@ -33,88 +33,58 @@
         </select>
         <button id="insertButton" class="button btn btn-success">Нажать</button>
         <div id="container"></div>
-    </li>
-    <li style="height: 220px">
-      <h4>При нажатии на ссылку, равномерно перемещать HTML-элемент с классом <code>play</code> вправо, при повторном нажатии - перемещать влево.</h4>
-      <br />
-      <a href="/" id="playAnimation" class="button btn btn-success">Поехали!</a>
-      <div class="play"></div>
+      </li>
+      <li style="height: 220px">
+        <h4>При нажатии на ссылку, равномерно перемещать HTML-элемент с классом <code>play</code> вправо, при повторном нажатии - перемещать влево.</h4>
+        <br />
+        <a href="/" id="playAnimation" class="button btn btn-success">Поехали!</a>
+        <div class="play"></div>
+      </li>
+      <li>
+        <h4>При нажатии на кнопку выдавать bootstrap-alert соответствующего типа c текстом из поля ввода.
+        HTML код всплывающих элементов можно посмотреть по <a href="https://www.w3schools.com/bootstrap/bootstrap_alerts.asp">ссылке</a>.
+        Alert должен плавно появляться в верхнем правом углу, при нажатии на крестик - исчезать. Так же alert'ы должны закрываться автоматичесски через 10 секунд.
+        Если несколько раз подряд нажать на кнопку - то сообщения выстраиваются один под другим.
+        </h4>
+        <br />
 
-      <script>
-        
-      </script>
-    </li>
-        <li>
-    <h4>При нажатии на кнопку выдавать bootstrap-alert соответствующего типа c текстом из поля ввода.
-    HTML код всплывающих элементов можно посмотреть по <a href="https://www.w3schools.com/bootstrap/bootstrap_alerts.asp">ссылке</a>.
-    Alert должен плавно появляться в верхнем правом углу, при нажатии на крестик - исчезать. Так же alert'ы должны закрываться автоматичесски через 10 секунд.
-    Если несколько раз подряд нажать на кнопку - то сообщения выстраиваются один под другим.
-    </h4>
-    <br />
+        <input id="alert-text" type="text" class="form-control">
 
+        <button class="button btn btn-success" onclick="showAlert('success')">Success</button>
+        <button class="button btn btn-info" onclick="showAlert('info')">Info</button>
+        <button class="button btn btn-warning" onclick="showAlert('warning')">Warning</button>
+        <button class="button btn btn-danger" onclick="showAlert('danger')">Danger</button>
+      </li>
+      <li>
+        <h4><b class="h2 text-danger">*</b>
+        Сделать кнопочку <i class="text-info">scroll to top</i>, она должна появляться когда пользователь проскролил страницу на размер одного видимого экрана.
+        Кнопочку нужно аккуратно стилизовать.
+        </h4>
+        <br />
 
-    <input type="text" class="form-control">
+        <script>
+        // script for task #4
+        </script>
+      </li>
+      <li>
+        <h4><b class="h2 text-danger">**</b>
+        Реализовать перемещение элементов внутри контейнера. Элементы нельзя ставить ближе <i class="text-info">10px</i> к границе контейнера.
+        Во время перемещения элемента ему должен присваиваться класс <code>move</code>. Перетаскивание эелементов должно так де работать и на мобильных устройствах.</h4>
+        <br />
 
-    <button class="button btn btn-success">Success</button>
-    <button class="button btn btn-info">Info</button>
-    <button class="button btn btn-warning">Warning</button>
-    <button class="button btn btn-danger">Danger</button>
+        <div class="panel box">
+        <div class="dragable red" style="left: 250px;top: 28px;"></div>
+        <div class="dragable green" style="left: 50px;top: 68px;"></div>
+        <div class="dragable blue" style="left: 350px;top: 287px;"></div>
+        <div class="dragable purple move" style="left: 70px;top: 28px;"></div>
+        </div>
 
-
-    <script>
-    // script for task #3
-    </script>
-        </li>
-        <li>
-    <h4><b class="h2 text-danger">*</b>
-    Сделать кнопочку <i class="text-info">scroll to top</i>, она должна появляться когда пользователь проскролил страницу на размер одного видимого экрана.
-    Кнопочку нужно аккуратно стилизовать.
-    </h4>
-    <br />
-
-    <script>
-    // script for task #4
-    </script>
-        </li>
-        <li>
-    <h4><b class="h2 text-danger">**</b>
-    Реализовать перемещение элементов внутри контейнера. Элементы нельзя ставить ближе <i class="text-info">10px</i> к границе контейнера.
-    Во время перемещения элемента ему должен присваиваться класс <code>move</code>. Перетаскивание эелементов должно так де работать и на мобильных устройствах.</h4>
-    <br />
-
-    <div class="panel box">
-    <div class="dragable red" style="left: 250px;top: 28px;"></div>
-    <div class="dragable green" style="left: 50px;top: 68px;"></div>
-    <div class="dragable blue" style="left: 350px;top: 287px;"></div>
-    <div class="dragable purple move" style="left: 70px;top: 28px;"></div>
-    </div>
-
-    <script>
-    // script for task #5
-    </script>
-        </li>
+        <script>
+        // script for task #5
+        </script>
+      </li>
     </ol>
-    <br><br><br>
-
-    <div class="alert alert-success" style="top: 10px">
-    <a href="#" class="close" title="close">&times;</a>
-    <strong>Success!</strong> Indicates a successful or positive action.
-    </div>
-
-    <div class="alert alert-info" style="top: 70px">
-    <a href="#" class="close" title="close">&times;</a>
-    <strong>Info!</strong> Indicates a neutral informative change or action. With long long text
-    </div>
-
-    <div class="alert alert-warning" style="top: 150px">
-    <a href="#" class="close" title="close">&times;</a>
-    <strong>Warning!</strong> Indicates a warning that might need attention.
-    </div>
-
-    <div class="alert alert-danger" style="top: 210px">
-    <a href="#" class="close" title="close">&times;</a>
-    <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
-    </div>
+    <div id="alert-container"></div>
     <script src="main.js"></script>
   </body>
 </html>
