@@ -9,7 +9,7 @@ btn.onclick = () => {
       container.insertAdjacentElement('afterBegin', getFragment(++copyCounter));
       break;
     case 1:
-      container.insertBefore(getFragment(++copyCounter), container.children[Math.floor(copyCounter/2)])
+      container.insertBefore(getFragment(++copyCounter), container.children[Math.floor(copyCounter/2)]);
       break;
     case 2:
       container.appendChild(getFragment(++copyCounter));
@@ -19,8 +19,18 @@ btn.onclick = () => {
 
 function getFragment(copyCounter) {
   let fragment = document.getElementsByTagName('pre')[0].innerHTML;
-  fragment = fragment.replace('#', copyCounter)
-  const pre = document.createElement('pre')
-  pre.innerHTML = fragment
-  return pre
+  fragment = fragment.replace('#', copyCounter);
+  const pre = document.createElement('pre');
+  pre.innerHTML = fragment;
+  return pre;
+}
+
+//Task 2
+const elem = document.getElementsByClassName('play')[0]
+document.getElementById('playAnimation').onclick = (e) => {
+  e.preventDefault();
+  if(parseInt(elem.style.left) === 0)
+    elem.style.left = elem.parentElement.offsetWidth - elem.offsetWidth + 'px';
+  else
+    elem.style.left = 0 + 'px';
 }
